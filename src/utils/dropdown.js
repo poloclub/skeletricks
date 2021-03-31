@@ -77,9 +77,6 @@ export class Dropdown {
     // Dropdown click function
     var dropdown_id = this.id
     this.dropdown_contents.onclick = function() { 
-
-      // console.log(dropdown_id)
-
       // Check if the dropdown menu is already displayed
       var dropdown_menu = document.getElementById('dropdown-menu-' + dropdown_id)
       var already_displayed = dropdown_menu.style.display.includes('block')
