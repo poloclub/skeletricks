@@ -1,0 +1,1 @@
+{"true": 82, "pred-benign": 85, "pred-attack-patch10pgd001": 78, "pred-attack-patch10pgd002": 85, "pred-attack-patch10pgd004": 85, "pred-attack-patch10pgd008": 85, "pred-attack-patch10pgd016": 85, "pred-attack-patch10pgd032": 85, "pred-attack-patch10pgd064": 85, "pred-attack-patch10pgd128": 82}
