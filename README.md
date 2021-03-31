@@ -2,7 +2,7 @@
 An interactive system for visualizing and deciphering adversarial attacks on human action recognition models to help enhance human understanding of attacks.
 
 ## Live Demo
-For a live demo with no installation, visit https://poloclub.github.io/skeletricks/
+For a live demo with no installation needed, visit https://poloclub.github.io/skeletricks/
 
 ## Running Locally
 Clone or download this repo
