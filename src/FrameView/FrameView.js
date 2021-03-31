@@ -15,10 +15,10 @@ import {
   data_dir,
   y_line_chart,
   attack_strength,
-  week_std_dev,
-  week_avg,
-  set_week_std_dev,
-  set_week_avg
+  week_mad,
+  week_med,
+  set_week_med,
+  set_week_mad
 } from '../utils/variable.js'
 import { 
   icon_class, layout_style, bg_img_style, keypoints, skeletons,
@@ -36,6 +36,11 @@ import { create, all } from 'mathjs'
 const config = { }
 const math = create(all, config)
 
+function mad(data) {
+  let curr_median = math.median(data)
+  let diff  = data.map((e) => (math.abs(e - curr_median)))
+  return math.median(diff)
+}
 
 //////////////////////////////////////////////////////////////////
 // Generate frame control
@@ -264,7 +269,6 @@ export function gen_frame_comparison_plot() {
     data_path['strong_angle_filepath']
   ]
 
-  console.log(data_list);
   
   Promise.all([
     // TODO: Need to read correct data for the selected attack strength
@@ -456,16 +460,16 @@ function draw_line_chart(data, item) {
     if (item.includes('joint')) {
       if (plot_type.includes('weak')) {
         curr_data = data[0]
-        set_week_std_dev(math.std(curr_data))
-        set_week_avg(math.mean(curr_data))
+        set_week_mad(mad(curr_data))
+        set_week_med(math.median(curr_data))
       } else {
         curr_data = data[1]
       }
     } else {
       if (plot_type.includes('weak')) {
         curr_data = data[2][item]
-        set_week_std_dev(math.std(curr_data))
-        set_week_avg(math.mean(curr_data))
+        set_week_mad(mad(curr_data))
+        set_week_med(math.median(curr_data))
       } else {
         curr_data = data[3][item]
       }
@@ -527,8 +531,8 @@ function draw_line_chart(data, item) {
       .append('g')
       .attr('id', `plot-line-${plot_type}`)
 
-    let sd_line_y_one = week_avg - week_std_dev
-    let sd_line_y_two = week_avg + week_std_dev
+    let sd_line_y_one = week_med - week_mad
+    let sd_line_y_two = week_med + week_mad
 
     let sd_line_one = std_dev_line_one
       .append('line')
