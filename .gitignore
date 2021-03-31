@@ -1,6 +1,4 @@
 .DS_Store
 node_modules/*
-public/patch_interpolated_data/*
-public/pgd_interpolated_data/*
 data_push.py
 .vscode/*
