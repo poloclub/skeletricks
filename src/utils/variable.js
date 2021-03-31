@@ -80,18 +80,18 @@ function set_data_dir(val) {
 
 export {data_dir, set_data_dir}
 
-let week_std_dev = 0
-function set_week_std_dev(val) {
-  week_std_dev = val
+let week_mad = 0
+function set_week_mad(val) {
+  week_mad= val
 }
 
-let week_avg = 0
-function set_week_avg(val) {
-  week_avg = val
+let week_med = 0
+function set_week_med(val) {
+  week_med = val
 }
 
-export {week_std_dev, set_week_std_dev}
-export {week_avg, set_week_avg}
+export {week_med, set_week_med}
+export {week_mad, set_week_mad}
 
 
 var attack_strength = {
