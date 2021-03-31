@@ -1148,7 +1148,6 @@ export function update_curr_skeleton() {
   let weak_g = d3.select('#weak-view-skeleton')
   let strong_g = d3.select('#strong-view-skeleton')
   let coeff2 = bg_img_style['separate']['width'] / bg_img_style['original']['width']
-  console.log(cumulate)
   if (!cumulate || (frame_info['curr'] != start_frame)) {
     draw_skeleton('weak', weak_g, coeff2, cumulate)
     draw_skeleton('strong', strong_g, coeff2, cumulate)
@@ -1157,8 +1156,6 @@ export function update_curr_skeleton() {
 }
 
 export function draw_skeleton(input_type, g, coeff, cumulate, dont_remove) {
-  console.log(cumulate);
-  // XXXXXXXXXXXXXXXXXXXXXX
   let [m, M] = [0, 2.09]
   let r_scale = d3.scaleLinear()
     .domain([m, M])
