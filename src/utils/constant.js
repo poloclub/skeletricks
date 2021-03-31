@@ -121,7 +121,7 @@ export var time_style = {
   'slider-bar-height': 1,
   'slider-bar-border-radius': 0,
   'slider-knob-border-radius': 3,
-  'knob-width': 2,
+  'knob-width': 4,
   'knob-height': 20,
   'knob-font-size': 11,
   'knob-text-x': -23,

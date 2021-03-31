@@ -12,10 +12,10 @@
     get_file_name, 
     get_val_file_name} from './DistributionView'
   import {
-    week_std_dev, 
-    set_week_std_dev,
-    week_avg, 
-    set_week_avg} from '../utils/variable'
+    week_mad, 
+    set_week_mad,
+    week_med, 
+    set_week_med} from '../utils/variable'
 
   // Export let name
   let DistributionView = undefined
