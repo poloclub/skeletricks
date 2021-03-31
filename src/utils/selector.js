@@ -7,7 +7,7 @@ import {
 import { 
   color_dict, 
   bg_img_style,
-  unused_videos
+  used_videos
 } from '../utils/constant.js'
 import { 
   frame_info, 
@@ -151,7 +151,7 @@ function gen_attack_choose(parent_div) {
     var foundLunges = 0;
 
     for (var i = 0; i <= 98; i++) {
-      if (!unused_videos.includes(i)) {
+      if (used_videos.includes(i)) {
         var numString = String(i)
 
         while (numString.length < 5) {

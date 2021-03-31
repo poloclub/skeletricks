@@ -21,5 +21,17 @@
     "nouislider": "^14.6.4",
     "rollup-plugin-css-only": "^3.1.0",
     "sirv-cli": "^0.4.4"
-  }
+  },
+  "description": "",
+  "main": "rollup.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poloclub/skeletricks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poloclub/skeletricks/issues"
+  },
+  "homepage": "https://github.com/poloclub/skeletricks#readme"
 }
