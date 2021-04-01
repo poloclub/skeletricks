@@ -1,3 +1,4 @@
 .DS_Store
 data_push.py
 .vscode/*
+node_modules/*
